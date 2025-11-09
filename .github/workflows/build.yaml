@@ -33,7 +33,7 @@ jobs:
           push: true
           tags: |
             ${{ vars.DOCKERHUB_USERNAME }}/cognera:latest
-            ${{ vars.DOCKERHUB_USERNAME }}/cognera:${{ github.sha }}
+            ${{ vars.DOCKERHUB_USERNAME }}/cognera:${{ github.sha.substr(0,7) }}
 
 
       - name: Done
